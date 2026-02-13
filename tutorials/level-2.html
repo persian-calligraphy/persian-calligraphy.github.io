@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 2: Letters &amp; Forms \u2014 Persian Calligraphy</title>
+  <meta name="description" content="Learn the Persian alphabet in calligraphic form. Letter anatomy, isolated forms, and proportional rules.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">
+        Persian Calligraphy
+        <span>The Art of the Reed Pen</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.main-nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="level-1.html" class="active">Tutorials</a>
+        <a href="../gallery.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero-tutorial">
+    <div class="container">
+      <span class="level-tag">Level 02 of 05</span>
+      <h1>Letters &amp; Forms</h1>
+      <div class="persian-display" style="text-align:left;font-size:clamp(1.5rem,3vw,2.5rem);color:var(--ink-blue);padding:0.5rem 0;">\u062D\u0631\u0648\u0641 \u0648 \u0627\u0634\u06A9\u0627\u0644</div>
+      <p style="max-width:550px;color:var(--mid-gray);font-size:1.05rem;">
+        The 32 letters of the Persian alphabet, each with its own anatomy, proportions, and personality. Here you learn to render them with precision.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="tutorial-content">
+    <div class="tutorial-layout">
+      <div class="tutorial-body">
+
+        <h2 id="alphabet">The Persian Alphabet</h2>
+        <p>
+          The Persian alphabet consists of 32 letters, extending the Arabic alphabet with four
+          additional characters: \u067E (pe), \u0686 (che), \u0698 (zhe), and \u06AF (gaf). Each letter has up to four
+          forms depending on its position in a word: isolated, initial, medial, and final.
+        </p>
+
+        <div class="letter-grid">
+          <div class="letter-cell"><div class="letter-large">\u0627</div><div class="letter-name">Alef</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0628</div><div class="letter-name">Be</div></div>
+          <div class="letter-cell"><div class="letter-large">\u067E</div><div class="letter-name">Pe</div></div>
+          <div class="letter-cell"><div class="letter-large">\u062A</div><div class="letter-name">Te</div></div>
+          <div class="letter-cell"><div class="letter-large">\u062B</div><div class="letter-name">Se</div></div>
+          <div class="letter-cell"><div class="letter-large">\u062C</div><div class="letter-name">Jim</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0686</div><div class="letter-name">Che</div></div>
+          <div class="letter-cell"><div class="letter-large">\u062D</div><div class="letter-name">He (jimi)</div></div>
+          <div class="letter-cell"><div class="letter-large">\u062E</div><div class="letter-name">Khe</div></div>
+          <div class="letter-cell"><div class="letter-large">\u062F</div><div class="letter-name">Dal</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0630</div><div class="letter-name">Zal</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0631</div><div class="letter-name">Re</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0632</div><div class="letter-name">Ze</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0698</div><div class="letter-name">Zhe</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0633</div><div class="letter-name">Sin</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0634</div><div class="letter-name">Shin</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0635</div><div class="letter-name">Sad</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0636</div><div class="letter-name">Zad</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0637</div><div class="letter-name">Ta</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0638</div><div class="letter-name">Za</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0639</div><div class="letter-name">Eyn</div></div>
+          <div class="letter-cell"><div class="letter-large">\u063A</div><div class="letter-name">Gheyn</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0641</div><div class="letter-name">Fe</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0642</div><div class="letter-name">Qaf</div></div>
+          <div class="letter-cell"><div class="letter-large">\u06A9</div><div class="letter-name">Kaf</div></div>
+          <div class="letter-cell"><div class="letter-large">\u06AF</div><div class="letter-name">Gaf</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0644</div><div class="letter-name">Lam</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0645</div><div class="letter-name">Mim</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0646</div><div class="letter-name">Nun</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0648</div><div class="letter-name">Vav</div></div>
+          <div class="letter-cell"><div class="letter-large">\u0647</div><div class="letter-name">He</div></div>
+          <div class="letter-cell"><div class="letter-large">\u06CC</div><div class="letter-name">Ye</div></div>
+        </div>
+
+        <h2 id="groups">Letter Groups</h2>
+        <p>
+          Persian letters are traditionally organized into groups that share a similar base shape.
+          Learning one letter in a group gives you the foundation for all others in that group \u2014
+          they differ only by dots.
+        </p>
+
+        <h3 id="group-ba">The Ba Group: \u0628 \u067E \u062A \u062B</h3>
+        <p>
+          These letters share the same basic form \u2014 a shallow, horizontal boat shape.
+          The only difference between them is the number and placement of dots:
+          ba (\u0628) has one dot below, pe (\u067E) has three dots below, ta (\u062A) has two dots above,
+          and se (\u062B) has three dots above.
+        </p>
+
+        <div class="stroke-diagram">
+          <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- Ba base shape -->
+            <g transform="translate(30, 20)">
+              <!-- The boat shape -->
+              <path d="M 120,60 Q 80,60 50,65 Q 20,72 10,80 Q 30,85 60,82 Q 90,78 120,75" fill="none" stroke="#1b2a4a" stroke-width="5" stroke-linecap="round"/>
+              <!-- Dot below for ba -->
+              <circle cx="65" cy="100" r="5" fill="#1b2a4a"/>
+              <text x="65" y="135" font-size="11" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif">\u0628 BA</text>
+            </g>
+            <!-- Pe -->
+            <g transform="translate(170, 20)">
+              <path d="M 120,60 Q 80,60 50,65 Q 20,72 10,80 Q 30,85 60,82 Q 90,78 120,75" fill="none" stroke="#1b2a4a" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="55" cy="100" r="4" fill="#1b2a4a"/>
+              <circle cx="70" cy="100" r="4" fill="#1b2a4a"/>
+              <circle cx="62" cy="112" r="4" fill="#1b2a4a"/>
+              <text x="65" y="145" font-size="11" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif">\u067E PE</text>
+            </g>
+            <!-- Ta -->
+            <g transform="translate(310, 20)">
+              <path d="M 120,60 Q 80,60 50,65 Q 20,72 10,80 Q 30,85 60,82 Q 90,78 120,75" fill="none" stroke="#1b2a4a" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="58" cy="45" r="4" fill="#1b2a4a"/>
+              <circle cx="73" cy="45" r="4" fill="#1b2a4a"/>
+              <text x="65" y="135" font-size="11" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif">\u062A TA</text>
+            </g>
+            <!-- Se -->
+            <g transform="translate(450, 20)">
+              <path d="M 120,60 Q 80,60 50,65 Q 20,72 10,80 Q 30,85 60,82 Q 90,78 120,75" fill="none" stroke="#1b2a4a" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="55" cy="45" r="4" fill="#1b2a4a"/>
+              <circle cx="75" cy="45" r="4" fill="#1b2a4a"/>
+              <circle cx="65" cy="33" r="4" fill="#1b2a4a"/>
+              <text x="65" y="135" font-size="11" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif">\u062B SE</text>
+            </g>
+          </svg>
+          <div class="caption">The Ba Group \u2014 Same base shape, different dots</div>
+        </div>
+
+        <h3 id="group-jim">The Jim Group: \u062C \u0686 \u062D \u062E</h3>
+        <p>
+          These letters share a rounded, bowl-like form. Jim (\u062C) has one dot below,
+          che (\u0686) has three dots below, he-jimi (\u062D) has no dots, and khe (\u062E) has one dot above.
+          The bowl shape in Nastaliq is deep and elegant, curving below the baseline.
+        </p>
+
+        <h3 id="group-dal">The Dal Group: \u062F \u0630</h3>
+        <p>
+          Dal (\u062F) and zal (\u0630) are among the simplest letters \u2014 a small angular stroke
+          with a hook. Zal is simply dal with a dot above. These are non-connecting letters:
+          they connect to the letter before them but not after.
+        </p>
+
+        <h3 id="group-re">The Re Group: \u0631 \u0632 \u0698</h3>
+        <p>
+          Re (\u0631), ze (\u0632), and zhe (\u0698) share a simple curved tail form. Like the dal group,
+          these are non-connecting letters. The curve drops below the baseline gracefully \u2014
+          in Nastaliq, this tail is one of the most characteristic features.
+        </p>
+
+        <h3 id="group-sin">The Sin Group: \u0633 \u0634</h3>
+        <p>
+          Sin (\u0633) and shin (\u0634) feature three small teeth followed by a sweeping bowl.
+          In Nastaliq, the teeth are often simplified into a smooth wave. These are among
+          the wider letters and demand careful spacing.
+        </p>
+
+        <h2 id="anatomy">Letter Anatomy</h2>
+        <p>
+          Each letter has specific anatomical features that must be understood before writing:
+        </p>
+
+        <ul>
+          <li><strong>Sareh (head):</strong> The top of the letter, where the stroke typically begins.</li>
+          <li><strong>Taneh (body):</strong> The main form of the letter.</li>
+          <li><strong>Dombaaleh (tail):</strong> The descending stroke below the baseline.</li>
+          <li><strong>Kashideh (extension):</strong> The horizontal connecting stroke between letters.</li>
+          <li><strong>Nuqta (dot):</strong> The distinguishing marks above or below.</li>
+        </ul>
+
+        <div class="info-box">
+          <h4>Key Concept</h4>
+          <p>
+            In Nastaliq, letters are written on a descending diagonal \u2014 each letter sits slightly
+            lower than the one before it. This "hanging" quality (the literal meaning of "Nastaliq")
+            gives the script its distinctive cascading rhythm.
+          </p>
+        </div>
+
+        <h2 id="positions">Positional Forms</h2>
+        <p>
+          Most Persian letters change shape depending on their position in a word.
+          Understanding these four forms is essential:
+        </p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Letter</th>
+              <th>Isolated</th>
+              <th>Initial</th>
+              <th>Medial</th>
+              <th>Final</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ba</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0628</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0628\u0640</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0640\u0628\u0640</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0640\u0628</td>
+            </tr>
+            <tr>
+              <td>Jim</td>
+              <td class="persian-text" style="font-size:1.5rem">\u062C</td>
+              <td class="persian-text" style="font-size:1.5rem">\u062C\u0640</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0640\u062C\u0640</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0640\u062C</td>
+            </tr>
+            <tr>
+              <td>Sin</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0633</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0633\u0640</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0640\u0633\u0640</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0640\u0633</td>
+            </tr>
+            <tr>
+              <td>Eyn</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0639</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0639\u0640</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0640\u0639\u0640</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0640\u0639</td>
+            </tr>
+            <tr>
+              <td>Kaf</td>
+              <td class="persian-text" style="font-size:1.5rem">\u06A9</td>
+              <td class="persian-text" style="font-size:1.5rem">\u06A9\u0640</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0640\u06A9\u0640</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0640\u06A9</td>
+            </tr>
+            <tr>
+              <td>He</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0647</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0647\u0640</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0640\u0647\u0640</td>
+              <td class="persian-text" style="font-size:1.5rem">\u0640\u0647</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="info-box tip-box">
+          <h4>Practice Method</h4>
+          <p>
+            Write each letter group in all four positions before moving to the next group.
+            Fill entire pages with a single letter. The traditional mashq (practice) method
+            demands repetition until the hand moves without conscious thought.
+          </p>
+        </div>
+
+        <h2 id="proportions">Proportional Rules</h2>
+        <p>
+          Every letter has established proportions measured in nuqtas. Here are the key
+          proportions for the most common letters in Nastaliq:
+        </p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Letter</th>
+              <th>Height</th>
+              <th>Width</th>
+              <th>Below Baseline</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Alef (\u0627)</td><td>5\u20137 nuqtas</td><td>1 nuqta</td><td>0</td></tr>
+            <tr><td>Ba (\u0628)</td><td>1 nuqta</td><td>5\u20136 nuqtas</td><td>0.5 nuqta</td></tr>
+            <tr><td>Jim (\u062C)</td><td>2 nuqtas</td><td>3\u20134 nuqtas</td><td>4\u20135 nuqtas</td></tr>
+            <tr><td>Dal (\u062F)</td><td>2 nuqtas</td><td>2 nuqtas</td><td>0</td></tr>
+            <tr><td>Sin (\u0633)</td><td>1 nuqta</td><td>7\u20139 nuqtas</td><td>0.5 nuqta</td></tr>
+            <tr><td>Eyn (\u0639)</td><td>3 nuqtas</td><td>2\u20133 nuqtas</td><td>3\u20134 nuqtas</td></tr>
+            <tr><td>Lam (\u0644)</td><td>6\u20138 nuqtas</td><td>1 nuqta</td><td>2 nuqtas</td></tr>
+            <tr><td>Nun (\u0646)</td><td>1 nuqta</td><td>3\u20134 nuqtas</td><td>3\u20134 nuqtas</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="exercises">Exercises</h2>
+        <ol>
+          <li><strong>Group practice:</strong> Write each letter group (ba, jim, dal, re, sin) in isolation, one full page per group.</li>
+          <li><strong>Four-form drill:</strong> For each connecting letter, write it in all four positions across a line.</li>
+          <li><strong>Proportion check:</strong> Write the letter alef 20 times and measure each with your nuqta. Are they all the same height?</li>
+          <li><strong>Dot placement:</strong> Write ba, pe, ta, se in sequence. Ensure dots are consistently placed.</li>
+          <li><strong>Mirror pairs:</strong> Write dal/zal, re/ze, sin/shin side by side. The base forms should be identical.</li>
+        </ol>
+
+        <div class="practice-area">
+          <h4>Practice Space</h4>
+          <p style="color:var(--mid-gray);font-size:0.9rem;margin-bottom:1.5rem;">
+            Print and use these lines for your letter practice sessions.
+          </p>
+          <div class="practice-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Table of Contents -->
+      <aside class="toc">
+        <h4>On This Page</h4>
+        <ul>
+          <li><a href="#alphabet">The Persian Alphabet</a></li>
+          <li><a href="#groups">Letter Groups</a></li>
+          <li><a href="#group-ba">Ba Group</a></li>
+          <li><a href="#group-jim">Jim Group</a></li>
+          <li><a href="#group-dal">Dal Group</a></li>
+          <li><a href="#group-re">Re Group</a></li>
+          <li><a href="#group-sin">Sin Group</a></li>
+          <li><a href="#anatomy">Letter Anatomy</a></li>
+          <li><a href="#positions">Positional Forms</a></li>
+          <li><a href="#proportions">Proportional Rules</a></li>
+          <li><a href="#exercises">Exercises</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- Tutorial Navigation -->
+    <div class="tutorial-nav" style="max-width:1100px;margin:4rem auto 0;">
+      <a href="level-1.html">
+        <span class="nav-label">\u2190 Previous Level</span>
+        <span class="nav-title">Foundations</span>
+      </a>
+      <a href="level-3.html">
+        <span class="nav-label">Next Level \u2192</span>
+        <span class="nav-title">Composition</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-section">
+        <h4>Curriculum</h4>
+        <a href="level-1.html">Level 1: Foundations</a>
+        <a href="level-2.html">Level 2: Letters &amp; Forms</a>
+        <a href="level-3.html">Level 3: Composition</a>
+        <a href="level-4.html">Level 4: The Great Scripts</a>
+        <a href="level-5.html">Level 5: Mastery</a>
+      </div>
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <a href="../gallery.html">Gallery</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Persian Calligraphy Tutorials. An open educational resource.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

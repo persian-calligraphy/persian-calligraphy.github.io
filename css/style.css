@@ -1,0 +1,896 @@
+/* ============================================================
+   PERSIAN CALLIGRAPHY TUTORIALS
+   Inspired by Museum of Modern Art — clean, bold, editorial
+   ============================================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #1a1a1a;
+  --white: #fafafa;
+  --cream: #f5f0eb;
+  --warm-gray: #e8e2dc;
+  --mid-gray: #8a8580;
+  --accent: #c23b22;
+  --accent-dark: #9a2f1b;
+  --gold: #b8860b;
+  --ink-blue: #1b2a4a;
+  --parchment: #f7f3ed;
+  --border: #d4cec8;
+  --font-display: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --max-width: 1400px;
+  --content-width: 800px;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--white);
+  color: var(--black);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--white);
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1.15rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  max-width: 65ch;
+}
+
+.persian-text {
+  font-family: 'Vazirmatn', 'Noto Naskh Arabic', 'Traditional Arabic', serif;
+  direction: rtl;
+  text-align: right;
+  line-height: 2;
+}
+
+.persian-display {
+  font-family: 'Vazirmatn', 'Noto Naskh Arabic', serif;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  direction: rtl;
+  text-align: center;
+  line-height: 1.6;
+  color: var(--ink-blue);
+  padding: 2rem 0;
+}
+
+/* --- Layout --- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content-narrow {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+/* --- Header / Navigation --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--white);
+  border-bottom: 2px solid var(--black);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.site-logo {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: none;
+}
+
+.site-logo:hover {
+  color: var(--black);
+}
+
+.site-logo span {
+  display: block;
+  font-size: 0.65rem;
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  color: var(--mid-gray);
+  margin-top: 2px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.main-nav a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  padding: 0.25rem 0;
+  position: relative;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+.main-nav a:hover {
+  color: var(--black);
+}
+
+/* Mobile nav toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--black);
+  margin: 5px 0;
+  transition: transform 0.3s ease;
+}
+
+/* --- Hero Sections --- */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-home {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+}
+
+.hero-home h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-home .persian-display {
+  color: var(--warm-gray);
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  margin-bottom: 2rem;
+  opacity: 0.7;
+}
+
+.hero-home .hero-subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: var(--mid-gray);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+.hero-tutorial {
+  min-height: 60vh;
+  background: var(--cream);
+  border-bottom: 2px solid var(--black);
+}
+
+.hero-tutorial .level-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: 2px solid var(--white);
+  color: var(--white);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
+}
+
+.btn-dark {
+  border-color: var(--black);
+  color: var(--black);
+}
+
+.btn-dark:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.btn-accent {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-accent:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+/* --- Level Cards (Home Page) --- */
+.levels-section {
+  padding: 6rem 2rem;
+}
+
+.levels-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-intro {
+  text-align: center;
+  color: var(--mid-gray);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto 4rem;
+}
+
+.levels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2px;
+  background: var(--black);
+  border: 2px solid var(--black);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.level-card {
+  background: var(--white);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  border: none;
+}
+
+.level-card:hover {
+  background: var(--cream);
+  color: var(--black);
+}
+
+.level-card .level-number {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--warm-gray);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.level-card:hover .level-number {
+  color: var(--accent);
+}
+
+.level-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.level-card .level-persian {
+  font-family: 'Vazirmatn', 'Noto Naskh Arabic', serif;
+  direction: rtl;
+  font-size: 1.1rem;
+  color: var(--mid-gray);
+  margin-bottom: 1rem;
+}
+
+.level-card p {
+  color: var(--mid-gray);
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.level-card .card-arrow {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.level-card:hover .card-arrow {
+  transform: translateX(8px);
+}
+
+/* --- Tutorial Page Layout --- */
+.tutorial-content {
+  padding: 4rem 2rem;
+}
+
+.tutorial-body {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.tutorial-body h2 {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.tutorial-body h2:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.tutorial-body h3 {
+  margin-top: 2rem;
+}
+
+.tutorial-body ul, .tutorial-body ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+}
+
+.tutorial-body li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+/* --- Info Boxes --- */
+.info-box {
+  background: var(--cream);
+  border-left: 4px solid var(--accent);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+}
+
+.info-box h4 {
+  color: var(--accent);
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-box p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.tip-box {
+  border-left-color: var(--gold);
+}
+
+.tip-box h4 {
+  color: var(--gold);
+}
+
+/* --- Stroke Diagrams --- */
+.stroke-diagram {
+  background: var(--parchment);
+  border: 1px solid var(--border);
+  padding: 2.5rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.stroke-diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.stroke-diagram .caption {
+  font-size: 0.8rem;
+  color: var(--mid-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 1rem;
+}
+
+/* --- Letter Grid --- */
+.letter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 2px;
+  background: var(--black);
+  border: 2px solid var(--black);
+  margin: 2rem 0;
+}
+
+.letter-cell {
+  background: var(--white);
+  padding: 1.5rem;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.letter-cell:hover {
+  background: var(--cream);
+}
+
+.letter-cell .letter-large {
+  font-family: 'Vazirmatn', 'Noto Naskh Arabic', serif;
+  font-size: 2.5rem;
+  line-height: 1.4;
+  color: var(--ink-blue);
+  direction: rtl;
+}
+
+.letter-cell .letter-name {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mid-gray);
+  margin-top: 0.5rem;
+}
+
+/* --- Practice Area --- */
+.practice-area {
+  background: var(--parchment);
+  border: 2px solid var(--black);
+  padding: 3rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.practice-area h4 {
+  margin-bottom: 1rem;
+}
+
+.practice-lines {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.practice-lines .line {
+  height: 60px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.practice-lines .line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 1px dashed var(--warm-gray);
+}
+
+/* --- Gallery --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2px;
+  background: var(--black);
+  border: 2px solid var(--black);
+}
+
+.gallery-item {
+  background: var(--white);
+  overflow: hidden;
+}
+
+.gallery-item .gallery-image {
+  aspect-ratio: 4/3;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gallery-item .gallery-image .persian-display {
+  padding: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.gallery-item .gallery-info {
+  padding: 1.5rem 2rem;
+}
+
+.gallery-item .gallery-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.gallery-item .gallery-info .gallery-meta {
+  font-size: 0.8rem;
+  color: var(--mid-gray);
+}
+
+/* --- Tutorial Navigation --- */
+.tutorial-nav {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid var(--black);
+  margin-top: 4rem;
+}
+
+.tutorial-nav a {
+  display: block;
+  padding: 2rem;
+  flex: 1;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.tutorial-nav a:hover {
+  background: var(--cream);
+  color: var(--black);
+}
+
+.tutorial-nav a + a {
+  border-left: 2px solid var(--black);
+  text-align: right;
+}
+
+.tutorial-nav .nav-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--mid-gray);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.tutorial-nav .nav-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* --- Table of Contents (Sidebar) --- */
+.tutorial-layout {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.toc {
+  position: sticky;
+  top: 100px;
+  padding: 1.5rem 0;
+}
+
+.toc h4 {
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+  color: var(--mid-gray);
+}
+
+.toc ul {
+  list-style: none;
+}
+
+.toc li {
+  margin-bottom: 0.5rem;
+}
+
+.toc a {
+  font-size: 0.85rem;
+  color: var(--mid-gray);
+  border: none;
+  transition: color 0.2s ease;
+}
+
+.toc a:hover,
+.toc a.active {
+  color: var(--black);
+}
+
+/* --- Progress Bar --- */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  z-index: 200;
+  transition: width 0.1s ease;
+}
+
+/* --- Footer --- */
+.site-footer {
+  background: var(--black);
+  color: var(--warm-gray);
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+}
+
+.footer-section h4 {
+  color: var(--white);
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section a {
+  color: var(--mid-gray);
+  border: none;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a:hover {
+  color: var(--white);
+}
+
+.footer-bottom {
+  max-width: var(--max-width);
+  margin: 3rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+  font-size: 0.8rem;
+  color: var(--mid-gray);
+}
+
+/* --- Comparison Table --- */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border: 2px solid var(--black);
+}
+
+.comparison-table th {
+  background: var(--black);
+  color: var(--white);
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.comparison-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tr:hover td {
+  background: var(--cream);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .tutorial-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .toc {
+    position: static;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 4rem 1.5rem;
+  }
+
+  .levels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    border-bottom: 2px solid var(--black);
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .header-inner {
+    padding: 1rem 1.5rem;
+  }
+
+  .levels-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .level-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .tutorial-nav {
+    flex-direction: column;
+  }
+
+  .tutorial-nav a + a {
+    border-left: none;
+    border-top: 2px solid var(--black);
+    text-align: left;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .letter-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.animate-in:nth-child(2) { animation-delay: 0.1s; }
+.animate-in:nth-child(3) { animation-delay: 0.2s; }
+.animate-in:nth-child(4) { animation-delay: 0.3s; }
+.animate-in:nth-child(5) { animation-delay: 0.4s; }
+
+/* --- Print Styles --- */
+@media print {
+  .site-header, .site-footer, .tutorial-nav, .toc, .progress-bar {
+    display: none;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+    background: #fff !important;
+    color: #000 !important;
+  }
+}

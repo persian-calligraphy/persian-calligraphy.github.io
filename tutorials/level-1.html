@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 1: Foundations \u2014 Persian Calligraphy</title>
+  <meta name="description" content="Begin your Persian calligraphy journey. Learn about tools, materials, posture, and fundamental strokes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">
+        Persian Calligraphy
+        <span>The Art of the Reed Pen</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.main-nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="level-1.html" class="active">Tutorials</a>
+        <a href="../gallery.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero-tutorial">
+    <div class="container">
+      <span class="level-tag">Level 01 of 05</span>
+      <h1>Foundations</h1>
+      <div class="persian-display" style="text-align:left;font-size:clamp(1.5rem,3vw,2.5rem);color:var(--ink-blue);padding:0.5rem 0;">\u0645\u0628\u0627\u0646\u06CC</div>
+      <p style="max-width:550px;color:var(--mid-gray);font-size:1.05rem;">
+        Before a single letter is written, the calligrapher must understand the tools, the body, and the fundamental geometry of the stroke.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="tutorial-content">
+    <div class="tutorial-layout">
+      <div class="tutorial-body">
+
+        <h2 id="tools">The Tools of the Calligrapher</h2>
+
+        <h3 id="qalam">The Reed Pen (Qalam)</h3>
+        <p>
+          The qalam is the primary instrument of Persian calligraphy. Cut from dried reeds (<em>Phragmites</em>),
+          the pen's nib is shaped at a precise angle that determines the character of every stroke.
+          The quality of your writing begins with the quality of your cut.
+        </p>
+
+        <div class="info-box">
+          <h4>Key Concept</h4>
+          <p>
+            The nib of the qalam is cut at an angle between 45\u00b0 and 70\u00b0 relative to the writing line,
+            depending on the script. Nastaliq uses a steeper angle; Naskh uses a shallower one.
+            The width of the cut nib becomes your fundamental unit of proportion.
+          </p>
+        </div>
+
+        <p>
+          A well-prepared qalam should have a smooth, even cut with a small slit running up the center
+          of the nib to regulate ink flow. The slit should extend 5\u201310mm from the tip. Too short and
+          the ink won't flow; too long and you lose control.
+        </p>
+
+        <!-- Qalam SVG Diagram -->
+        <div class="stroke-diagram">
+          <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Reed body -->
+            <rect x="50" y="70" width="400" height="40" rx="8" fill="#c4a35a" stroke="#8a7340" stroke-width="1.5"/>
+            <!-- Nib cut -->
+            <polygon points="450,70 520,85 450,110" fill="#a08030" stroke="#8a7340" stroke-width="1.5"/>
+            <!-- Slit line -->
+            <line x1="480" y1="85" x2="520" y2="85" stroke="#5a4a20" stroke-width="1" stroke-dasharray="3,2"/>
+            <!-- Nib tip -->
+            <line x1="520" y1="78" x2="520" y2="98" stroke="#3a2a10" stroke-width="2"/>
+            <!-- Angle indicator -->
+            <line x1="520" y1="98" x2="560" y2="98" stroke="#c23b22" stroke-width="1" stroke-dasharray="4,3"/>
+            <line x1="520" y1="78" x2="555" y2="65" stroke="#c23b22" stroke-width="1" stroke-dasharray="4,3"/>
+            <path d="M 540,98 A 20,20 0 0,0 545,78" fill="none" stroke="#c23b22" stroke-width="1"/>
+            <text x="550" y="92" font-size="12" fill="#c23b22" font-family="Inter, sans-serif">60\u00b0</text>
+            <!-- Labels -->
+            <text x="200" y="60" font-size="11" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif" text-transform="uppercase" letter-spacing="1">REED BODY</text>
+            <text x="490" y="55" font-size="11" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif">NIB</text>
+            <text x="490" y="135" font-size="11" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif">SLIT</text>
+            <line x1="490" y1="128" x2="500" y2="95" stroke="#8a8580" stroke-width="0.5"/>
+          </svg>
+          <div class="caption">Anatomy of the Qalam \u2014 The reed pen cut for Nastaliq writing</div>
+        </div>
+
+        <h3 id="ink">Ink</h3>
+        <p>
+          Traditional Persian calligraphy ink is made from lampblack (soot) mixed with gum arabic
+          as a binder. The consistency should be smooth and flowing \u2014 not too thick (which causes
+          blotting) and not too thin (which causes bleeding). Modern calligraphers often use
+          high-quality sumi ink or specialized calligraphy inks as practical alternatives.
+        </p>
+
+        <div class="info-box tip-box">
+          <h4>Practical Tip</h4>
+          <p>
+            For beginners, Yasutomo sumi ink or Winsor &amp; Newton calligraphy ink provides
+            consistent results while you develop your stroke technique. Reserve traditional
+            ink-making for when you understand how ink viscosity affects your line.
+          </p>
+        </div>
+
+        <h3 id="paper">Paper</h3>
+        <p>
+          The paper used for Persian calligraphy must be smooth enough that the qalam glides
+          without catching, yet absorbent enough to hold a crisp line. Traditional papers
+          are burnished with an agate stone or glass to achieve this surface.
+        </p>
+        <p>
+          For practice, use smooth Bristol board or marker paper. For final works, seek out
+          handmade papers from Isfahan or use Arches hot-pressed watercolor paper as a Western alternative.
+        </p>
+
+        <h3 id="inkwell">The Inkwell (Dawat)</h3>
+        <p>
+          The dawat (inkwell) traditionally contains a small piece of raw silk or cotton that
+          acts as an ink reservoir and regulator. You dip the qalam into this material rather
+          than directly into liquid ink \u2014 this gives you far more control over ink flow.
+        </p>
+
+        <h2 id="posture">Posture &amp; Position</h2>
+        <p>
+          Calligraphy is a physical practice. Your body position directly affects the quality
+          of your line. The traditional position is seated on the floor with the paper resting
+          on one knee, but a desk works equally well if set up correctly.
+        </p>
+
+        <ul>
+          <li><strong>Back:</strong> Straight but not rigid. Tension in the body transfers to the pen.</li>
+          <li><strong>Shoulders:</strong> Relaxed and level. Drop them deliberately before you begin.</li>
+          <li><strong>Elbow:</strong> Free from the table. The arm should move from the shoulder for large strokes, from the wrist for small details.</li>
+          <li><strong>Grip:</strong> Hold the qalam between thumb and index finger, with the middle finger supporting from below. The grip should be firm enough for control, light enough that the pen can breathe.</li>
+          <li><strong>Paper angle:</strong> Slight tilt (15\u201320\u00b0) toward the writing hand.</li>
+        </ul>
+
+        <div class="info-box">
+          <h4>Key Concept</h4>
+          <p>
+            The calligrapher's breath matters. Traditional masters practice controlled breathing
+            while writing \u2014 exhaling slowly during a stroke, pausing between strokes to inhale.
+            This creates both physical steadiness and meditative focus.
+          </p>
+        </div>
+
+        <h2 id="nuqta">The Nuqta: Unit of Measurement</h2>
+        <p>
+          Every proportion in Persian calligraphy is measured in nuqtas (dots). A single nuqta
+          is the rhomboid mark created by pressing the full width of the qalam nib onto the paper
+          at a 45\u00b0 angle. This diamond-shaped dot becomes your ruler.
+        </p>
+
+        <!-- Nuqta SVG Diagram -->
+        <div class="stroke-diagram">
+          <svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
+            <!-- Single nuqta -->
+            <g transform="translate(100, 80)">
+              <rect x="0" y="0" width="30" height="30" rx="2" fill="#1b2a4a" transform="rotate(45, 15, 15)"/>
+              <text x="15" y="70" font-size="11" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif">1 NUQTA</text>
+            </g>
+            <!-- Three nuqtas stacked -->
+            <g transform="translate(250, 40)">
+              <rect x="0" y="0" width="30" height="30" rx="2" fill="#1b2a4a" transform="rotate(45, 15, 15)"/>
+              <rect x="0" y="35" width="30" height="30" rx="2" fill="#1b2a4a" transform="rotate(45, 15, 50)"/>
+              <rect x="0" y="70" width="30" height="30" rx="2" fill="#1b2a4a" transform="rotate(45, 15, 85)"/>
+              <text x="15" y="130" font-size="11" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif">3 NUQTAS</text>
+              <!-- Measurement lines -->
+              <line x1="45" y1="5" x2="55" y2="5" stroke="#c23b22" stroke-width="1"/>
+              <line x1="45" y1="100" x2="55" y2="100" stroke="#c23b22" stroke-width="1"/>
+              <line x1="50" y1="5" x2="50" y2="100" stroke="#c23b22" stroke-width="1"/>
+            </g>
+            <!-- Alef example -->
+            <g transform="translate(420, 20)">
+              <rect x="22" y="0" width="6" height="120" fill="#1b2a4a" rx="1"/>
+              <text x="25" y="155" font-size="11" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif">ALEF = 5\u20137 NUQTAS</text>
+              <!-- Measurement dots -->
+              <rect x="40" y="5" width="12" height="12" rx="1" fill="none" stroke="#c23b22" stroke-width="1" transform="rotate(45, 46, 11)"/>
+              <rect x="40" y="22" width="12" height="12" rx="1" fill="none" stroke="#c23b22" stroke-width="1" transform="rotate(45, 46, 28)"/>
+              <rect x="40" y="39" width="12" height="12" rx="1" fill="none" stroke="#c23b22" stroke-width="1" transform="rotate(45, 46, 45)"/>
+              <rect x="40" y="56" width="12" height="12" rx="1" fill="none" stroke="#c23b22" stroke-width="1" transform="rotate(45, 46, 62)"/>
+              <rect x="40" y="73" width="12" height="12" rx="1" fill="none" stroke="#c23b22" stroke-width="1" transform="rotate(45, 46, 79)"/>
+              <rect x="40" y="90" width="12" height="12" rx="1" fill="none" stroke="#c23b22" stroke-width="1" transform="rotate(45, 46, 96)"/>
+            </g>
+          </svg>
+          <div class="caption">The Nuqta System \u2014 Every letter is measured in dots</div>
+        </div>
+
+        <p>
+          In Nastaliq, the letter alef (\u0627) is typically 5\u20137 nuqtas tall. The letter ba (\u0628)
+          is about 1 nuqta tall with a horizontal stroke of 5\u20136 nuqtas wide. Every letter in every
+          script has established proportions measured in this system.
+        </p>
+
+        <h2 id="strokes">The Fundamental Strokes</h2>
+        <p>
+          Before writing any letter, you must master the seven fundamental strokes. Every letter
+          in the Persian alphabet is composed of combinations of these elements.
+        </p>
+
+        <h3>1. The Vertical Stroke (Kashideh-ye Amudi)</h3>
+        <p>
+          A straight downward pull. This forms the basis of alef, lam, and other vertical elements.
+          Begin at the top with the full nib width, pull downward with steady pressure. The stroke
+          should be perfectly straight \u2014 practice against a ruled line until it becomes natural.
+        </p>
+
+        <h3>2. The Horizontal Stroke (Kashideh-ye Ofoghi)</h3>
+        <p>
+          A rightward pull at the baseline. This forms connections between letters and the body
+          of letters like ba, ta, and sa. Maintain consistent nib angle throughout.
+        </p>
+
+        <h3>3. The Curve (Khomidegi)</h3>
+        <p>
+          A smooth arc, curving from vertical to horizontal or vice versa. This is the defining
+          element of Nastaliq's flowing character. The curve must be continuous \u2014 any hesitation
+          shows as a wobble in the line.
+        </p>
+
+        <!-- Fundamental Strokes SVG -->
+        <div class="stroke-diagram">
+          <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Stroke 1: Vertical -->
+            <g transform="translate(50, 30)">
+              <line x1="40" y1="10" x2="40" y2="160" stroke="#1b2a4a" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="40" cy="10" r="4" fill="#c23b22"/>
+              <text x="40" y="195" font-size="10" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif">VERTICAL</text>
+              <!-- Direction arrow -->
+              <polygon points="40,170 35,155 45,155" fill="#c23b22"/>
+            </g>
+            <!-- Stroke 2: Horizontal -->
+            <g transform="translate(160, 30)">
+              <line x1="10" y1="80" x2="130" y2="80" stroke="#1b2a4a" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="130" cy="80" r="4" fill="#c23b22"/>
+              <text x="70" y="195" font-size="10" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif">HORIZONTAL</text>
+              <polygon points="5,80 20,75 20,85" fill="#c23b22"/>
+            </g>
+            <!-- Stroke 3: Curve -->
+            <g transform="translate(330, 30)">
+              <path d="M 40,10 Q 40,100 130,100" fill="none" stroke="#1b2a4a" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="40" cy="10" r="4" fill="#c23b22"/>
+              <text x="80" y="195" font-size="10" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif">CURVE</text>
+            </g>
+            <!-- Stroke 4: Dot -->
+            <g transform="translate(500, 30)">
+              <rect x="25" y="55" width="25" height="25" rx="2" fill="#1b2a4a" transform="rotate(45, 37.5, 67.5)"/>
+              <text x="37" y="195" font-size="10" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif">DOT (NUQTA)</text>
+            </g>
+          </svg>
+          <div class="caption">The Four Fundamental Elements \u2014 Every letter is built from these</div>
+        </div>
+
+        <h3>4. The Ascending Curve</h3>
+        <p>
+          A stroke that lifts from horizontal to diagonal or vertical. Found in letters like
+          nun and the tails of many final forms.
+        </p>
+
+        <h3>5. The Descending Tail (Dombaaleh)</h3>
+        <p>
+          The elegant downward sweep below the baseline. This is one of Persian calligraphy's
+          most distinctive features \u2014 the tails of letters like nun (\u0646), ya (\u06CC), and
+          the final forms of many letters drop below the line in graceful curves.
+        </p>
+
+        <h3>6. The Hook (Ghollaab)</h3>
+        <p>
+          A small curved flourish at the end of certain strokes. This appears at the end of
+          letters like dal (\u062F) and the beginning of letters like sin (\u0633).
+        </p>
+
+        <h3>7. The Dot (Nuqta)</h3>
+        <p>
+          The distinguishing mark placed above or below certain letters. Though small, dots
+          must be placed with precision \u2014 their position, size, and angle all carry meaning.
+          A misplaced dot changes one letter to another.
+        </p>
+
+        <h2 id="exercises">First Exercises</h2>
+        <p>
+          Begin with these exercises. Each should be practiced for a minimum of 30 minutes
+          before moving on. In traditional apprenticeship, students would spend weeks on
+          these fundamentals before touching a letter.
+        </p>
+
+        <ol>
+          <li><strong>Lines of dots:</strong> Fill an entire line with evenly-spaced nuqtas. They should be identical in size, spacing, and angle. This trains your nib control.</li>
+          <li><strong>Vertical strokes:</strong> Draw rows of parallel vertical lines, each exactly 5 nuqtas tall. Check them against each other for consistency.</li>
+          <li><strong>Horizontal strokes:</strong> Draw rows of horizontal lines of identical length. Focus on maintaining a consistent nib angle.</li>
+          <li><strong>Curves:</strong> Practice smooth quarter-circles connecting vertical to horizontal. No wobbles, no flat spots.</li>
+          <li><strong>Combined forms:</strong> Draw rows of the letter alef (\u0627) \u2014 a simple vertical stroke \u2014 as your first letter exercise.</li>
+        </ol>
+
+        <div class="practice-area">
+          <h4>Practice Space</h4>
+          <p style="color:var(--mid-gray);font-size:0.9rem;margin-bottom:1.5rem;">
+            Print this page and use these guide lines for your stroke practice.
+          </p>
+          <div class="practice-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+
+        <div class="info-box tip-box">
+          <h4>Master's Advice</h4>
+          <p>
+            Do not rush to write words. The great master Mir Emad Hassani spent three years
+            on fundamentals before writing his first complete word. Patience is not an obstacle
+            to mastery \u2014 it is the path itself.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Table of Contents -->
+      <aside class="toc">
+        <h4>On This Page</h4>
+        <ul>
+          <li><a href="#tools">Tools of the Calligrapher</a></li>
+          <li><a href="#qalam">The Reed Pen</a></li>
+          <li><a href="#ink">Ink</a></li>
+          <li><a href="#paper">Paper</a></li>
+          <li><a href="#inkwell">The Inkwell</a></li>
+          <li><a href="#posture">Posture &amp; Position</a></li>
+          <li><a href="#nuqta">The Nuqta System</a></li>
+          <li><a href="#strokes">Fundamental Strokes</a></li>
+          <li><a href="#exercises">First Exercises</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- Tutorial Navigation -->
+    <div class="tutorial-nav" style="max-width:1100px;margin:4rem auto 0;">
+      <a href="../index.html">
+        <span class="nav-label">\u2190 Back</span>
+        <span class="nav-title">Home</span>
+      </a>
+      <a href="level-2.html">
+        <span class="nav-label">Next Level \u2192</span>
+        <span class="nav-title">Letters &amp; Forms</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-section">
+        <h4>Curriculum</h4>
+        <a href="level-1.html">Level 1: Foundations</a>
+        <a href="level-2.html">Level 2: Letters &amp; Forms</a>
+        <a href="level-3.html">Level 3: Composition</a>
+        <a href="level-4.html">Level 4: The Great Scripts</a>
+        <a href="level-5.html">Level 5: Mastery</a>
+      </div>
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <a href="../gallery.html">Gallery</a>
+        <a href="../index.html">Home</a>
+      </div>
+      <div class="footer-section">
+        <h4>About</h4>
+        <p style="font-size:0.85rem;color:var(--mid-gray);max-width:300px;">
+          A free, open resource for learning Persian calligraphy.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Persian Calligraphy Tutorials. An open educational resource.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

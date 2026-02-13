@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level 3: Composition \u2014 Persian Calligraphy</title>
+  <meta name="description" content="Master the art of connecting letters into words. Spacing, rhythm, and flow in Persian calligraphy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">
+        Persian Calligraphy
+        <span>The Art of the Reed Pen</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.main-nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
+        <a href="../index.html">Home</a>
+        <a href="level-1.html" class="active">Tutorials</a>
+        <a href="../gallery.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero-tutorial">
+    <div class="container">
+      <span class="level-tag">Level 03 of 05</span>
+      <h1>Composition</h1>
+      <div class="persian-display" style="text-align:left;font-size:clamp(1.5rem,3vw,2.5rem);color:var(--ink-blue);padding:0.5rem 0;">\u062A\u0631\u06A9\u06CC\u0628</div>
+      <p style="max-width:550px;color:var(--mid-gray);font-size:1.05rem;">
+        Letters become words. Words become lines. Lines become poetry. This is where calligraphy transforms from drawing to writing \u2014 and from writing to music.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="tutorial-content">
+    <div class="tutorial-layout">
+      <div class="tutorial-body">
+
+        <h2 id="connections">Connecting Letters</h2>
+        <p>
+          Persian script is cursive by nature \u2014 most letters connect to those adjacent to them.
+          Understanding how letters join is the bridge between knowing individual forms and writing words.
+        </p>
+
+        <h3 id="connecting-vs-non">Connecting vs. Non-Connecting Letters</h3>
+        <p>
+          Six letters in Persian never connect to the letter that follows them. These are the
+          "non-connecting" letters: alef (\u0627), dal (\u062F), zal (\u0630), re (\u0631), ze (\u0632), zhe (\u0698),
+          and vav (\u0648). After writing one of these letters, you must lift the pen before beginning
+          the next letter. All other letters connect forward.
+        </p>
+
+        <div class="info-box">
+          <h4>Key Concept</h4>
+          <p>
+            In Nastaliq, connections are not mere bridges between letters. The connecting stroke
+            (kashideh) is itself an expressive element. Its length, angle, and thickness convey
+            rhythm and can be adjusted to balance a word's visual weight.
+          </p>
+        </div>
+
+        <h3 id="kashideh">The Kashideh (Connecting Stroke)</h3>
+        <p>
+          The kashideh is the horizontal or diagonal stroke that connects one letter to the next.
+          In Nastaliq, the kashideh follows the characteristic descending angle of the script \u2014
+          approximately 8\u201312\u00b0 from horizontal.
+        </p>
+        <p>
+          The length of the kashideh is not fixed. It can be extended or compressed to:
+        </p>
+        <ul>
+          <li>Balance the visual weight of a word</li>
+          <li>Justify a line of text to a consistent width</li>
+          <li>Create emphasis or dramatic pause</li>
+          <li>Accommodate the varying depths of descending letters</li>
+        </ul>
+
+        <h2 id="word-structure">Word Structure</h2>
+        <p>
+          A Persian word is written as a series of connected and disconnected letter groups.
+          Each group flows as a single stroke or set of strokes, separated by the non-connecting letters.
+        </p>
+
+        <div class="stroke-diagram">
+          <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Word: بسم (bismillah first word) showing connection -->
+            <text x="300" y="100" font-family="'Vazirmatn', 'Noto Naskh Arabic', serif" font-size="72" fill="#1b2a4a" text-anchor="middle" direction="rtl">\u0628\u0633\u0645</text>
+            <!-- Connection indicators -->
+            <line x1="200" y1="130" x2="400" y2="130" stroke="#c23b22" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="300" y="155" font-size="11" fill="#8a8580" text-anchor="middle" font-family="Inter, sans-serif">CONNECTED LETTER GROUP</text>
+            <!-- Arrow showing flow direction -->
+            <text x="300" y="180" font-size="11" fill="#c23b22" text-anchor="middle" font-family="Inter, sans-serif">\u2190 WRITING DIRECTION (RIGHT TO LEFT)</text>
+          </svg>
+          <div class="caption">Letters flow together in connected groups, written right to left</div>
+        </div>
+
+        <h3 id="letter-stacking">Letter Stacking in Nastaliq</h3>
+        <p>
+          One of Nastaliq's defining features is vertical stacking. In certain combinations,
+          letters sit above or below each other rather than side by side. This creates the
+          script's characteristic density and visual richness.
+        </p>
+        <p>
+          Common stacking combinations include:
+        </p>
+        <ul>
+          <li><strong>Lam-Alef (\u0644\u0627):</strong> These always combine into a special ligature, one of the most recognizable forms in Persian calligraphy.</li>
+          <li><strong>Letters above final forms:</strong> When a connecting letter precedes a letter with a deep tail, the first letter may sit elevated.</li>
+          <li><strong>Dense clusters:</strong> Three or more connecting letters may stack in a diagonal cascade.</li>
+        </ul>
+
+        <h2 id="spacing">Spacing &amp; Rhythm</h2>
+        <p>
+          Good calligraphy has rhythm. The spaces between words, between lines, and within words
+          must all work together to create a harmonious whole.
+        </p>
+
+        <h3 id="word-spacing">Between Words</h3>
+        <p>
+          The standard word spacing in Nastaliq is approximately 2\u20133 nuqtas. This space should
+          be consistent throughout a line, though slight variations are acceptable when
+          justifying text to a margin.
+        </p>
+
+        <h3 id="line-spacing">Between Lines</h3>
+        <p>
+          Line spacing must account for the ascending and descending elements of the script.
+          In Nastaliq, the descending tails of one line must not collide with the ascending
+          elements of the line below. The standard line spacing is 10\u201314 nuqtas from baseline to baseline.
+        </p>
+
+        <div class="info-box tip-box">
+          <h4>Practical Tip</h4>
+          <p>
+            Rule your practice sheets with baseline guides spaced 12 nuqtas apart. Draw a second
+            set of light guidelines 4 nuqtas above each baseline to mark the top of short letters
+            like ba and ta. This creates a consistent frame for your writing.
+          </p>
+        </div>
+
+        <h3 id="visual-balance">Visual Balance</h3>
+        <p>
+          A well-composed line of calligraphy should have even "color" \u2014 a consistent density
+          of ink across the line. If one section looks heavier than another, the spacing needs
+          adjustment. This is an optical skill that develops with practice.
+        </p>
+
+        <h2 id="rhythm">The Rhythm of Writing</h2>
+        <p>
+          Persian calligraphy has an inherent musicality. The alternation between thick downstrokes
+          and thin upstrokes, between connected groups and spaces, creates a visual rhythm
+          analogous to musical meter.
+        </p>
+        <p>
+          Traditional masters describe this in terms of:
+        </p>
+        <ul>
+          <li><strong>Zarb (beat):</strong> The regular pulse of similar letter forms recurring through a line.</li>
+          <li><strong>Nafas (breath):</strong> The natural pauses between word groups where the pen lifts.</li>
+          <li><strong>Mowj (wave):</strong> The undulating quality of a line in Nastaliq as words cascade from upper-right to lower-left.</li>
+        </ul>
+
+        <div class="persian-display" style="font-size:clamp(1.5rem,3vw,2.2rem);margin:2rem 0;background:var(--parchment);padding:2rem;border:1px solid var(--border);">
+          \u0647\u0631 \u06A9\u0647 \u0686\u06CC\u0632\u06CC \u062F\u0648\u0633\u062A \u062F\u0627\u0631\u062F \u0628\u0647 \u0686\u0634\u0645 \u0627\u0648 \u0632\u06CC\u0628\u0627\u0633\u062A
+        </div>
+        <p style="text-align:center;font-style:italic;color:var(--mid-gray);font-size:0.9rem;margin-top:-1rem;">
+          "Whatever one loves appears beautiful in one's eyes." \u2014 Persian proverb
+        </p>
+
+        <h2 id="first-words">Your First Words</h2>
+        <p>
+          Begin with simple, short words that use letter groups you've already practiced.
+          These words are traditionally used as beginner exercises:
+        </p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Word</th>
+              <th>Romanization</th>
+              <th>Meaning</th>
+              <th>Why Practice This</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="persian-text" style="font-size:1.5rem">\u0628\u0633\u0645</td>
+              <td>bism</td>
+              <td>in the name of</td>
+              <td>Three connecting letters in sequence</td>
+            </tr>
+            <tr>
+              <td class="persian-text" style="font-size:1.5rem">\u0627\u0644\u0644\u0647</td>
+              <td>allah</td>
+              <td>God</td>
+              <td>Lam-lam-he connection, alef start</td>
+            </tr>
+            <tr>
+              <td class="persian-text" style="font-size:1.5rem">\u0639\u0634\u0642</td>
+              <td>eshq</td>
+              <td>love</td>
+              <td>Eyn initial, shin medial, qaf final</td>
+            </tr>
+            <tr>
+              <td class="persian-text" style="font-size:1.5rem">\u0622\u0628</td>
+              <td>\u0101b</td>
+              <td>water</td>
+              <td>Simple two-letter word with alef</td>
+            </tr>
+            <tr>
+              <td class="persian-text" style="font-size:1.5rem">\u0646\u0648\u0631</td>
+              <td>nur</td>
+              <td>light</td>
+              <td>Non-connecting vav between letters</td>
+            </tr>
+            <tr>
+              <td class="persian-text" style="font-size:1.5rem">\u06AF\u0644</td>
+              <td>gol</td>
+              <td>flower</td>
+              <td>Gaf-lam connection practice</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="exercises">Exercises</h2>
+        <ol>
+          <li><strong>Word repetition:</strong> Choose one word from the table above. Write it 50 times on a single page. Compare the first and last \u2014 note your improvement.</li>
+          <li><strong>Connection chains:</strong> Write strings of connected letters (not real words) to practice the kashideh: \u0628\u0628\u0628\u0628, \u0633\u0633\u0633\u0633, etc.</li>
+          <li><strong>Spacing drill:</strong> Write a simple sentence, then rewrite it three times with slightly different word spacing. Which looks most balanced?</li>
+          <li><strong>Line practice:</strong> Rule guidelines and write a single line of poetry three times, aiming for consistent baseline, spacing, and rhythm.</li>
+          <li><strong>Visual weight:</strong> Write a line, then squint at it. Do you see even "color" across the line, or are there heavy and light patches?</li>
+        </ol>
+
+        <div class="practice-area">
+          <h4>Practice Space</h4>
+          <p style="color:var(--mid-gray);font-size:0.9rem;margin-bottom:1.5rem;">
+            Use these guide lines for your word composition practice.
+          </p>
+          <div class="practice-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Table of Contents -->
+      <aside class="toc">
+        <h4>On This Page</h4>
+        <ul>
+          <li><a href="#connections">Connecting Letters</a></li>
+          <li><a href="#connecting-vs-non">Connecting vs. Non-Connecting</a></li>
+          <li><a href="#kashideh">The Kashideh</a></li>
+          <li><a href="#word-structure">Word Structure</a></li>
+          <li><a href="#letter-stacking">Letter Stacking</a></li>
+          <li><a href="#spacing">Spacing &amp; Rhythm</a></li>
+          <li><a href="#rhythm">Rhythm of Writing</a></li>
+          <li><a href="#first-words">Your First Words</a></li>
+          <li><a href="#exercises">Exercises</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- Tutorial Navigation -->
+    <div class="tutorial-nav" style="max-width:1100px;margin:4rem auto 0;">
+      <a href="level-2.html">
+        <span class="nav-label">\u2190 Previous Level</span>
+        <span class="nav-title">Letters &amp; Forms</span>
+      </a>
+      <a href="level-4.html">
+        <span class="nav-label">Next Level \u2192</span>
+        <span class="nav-title">The Great Scripts</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-section">
+        <h4>Curriculum</h4>
+        <a href="level-1.html">Level 1: Foundations</a>
+        <a href="level-2.html">Level 2: Letters &amp; Forms</a>
+        <a href="level-3.html">Level 3: Composition</a>
+        <a href="level-4.html">Level 4: The Great Scripts</a>
+        <a href="level-5.html">Level 5: Mastery</a>
+      </div>
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <a href="../gallery.html">Gallery</a>
+        <a href="../index.html">Home</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Persian Calligraphy Tutorials. An open educational resource.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
